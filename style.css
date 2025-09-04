@@ -21,5 +21,12 @@ span {
 }
 
 #hour, #min, #sec {
-    
+    box-shadow: 0 0 15px 5px black;
+}
+
+@media (max-width: 500px) {
+    span {
+      font-size: 50px;
+      margin: 0;
+    }
 }
