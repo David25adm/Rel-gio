@@ -1,22 +1,20 @@
-function atualizarRelogio() {
-    let data = new Date();
-    let horas = data.getHours();
-    let minutos = data.getMinutes();
-    let segundos = data.getSeconds();
+const hour = document.querySelector('#hour')
+const min = document.querySelector('#min')
+const sec = document.querySelector('#sec')
 
-    if (horas < 10){
-        horas = "0" + horas;
-    }
 
-    if (minutos < 10){
-        minutos = "0" + minutos;
-    }
+setInterval(() => {
+     let Date = new Date()
+     let dhour = Date.getHours()
+      let dmin = Date.getMinutes()
+       let dsec = Date.getSeconds()
 
-    if (segundos < 10){
-        segundos = "0" + segundos
-    }
+       hour.innerHTML = `${formatTime(dhour)}`
+       min.innerHTML = `${formatTime(dmin)}`
+       sec.innerHTML = `${formatTime(dsec)}`
 
-    document.getElementById('relogio').innerHTML = horas + ":" + minutos + ":" + segundos;
+}, 1000)
 
-    setInterval(atualizarRelogio, 1000);
+function formatTime(time) {
+    return time < 10 ? '0' + time : time
 }
