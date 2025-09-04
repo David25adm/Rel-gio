@@ -9,9 +9,9 @@ setInterval(() => {
       let dmin = Date.getMinutes()
        let dsec = Date.getSeconds()
 
-       hour.innerHTML = `${formatTime(dhour)}`
-       min.innerHTML = `${formatTime(dminute)}`
-       sec.innerHTML = `${formatTime(dsec)}`
+       hour.innerHTML = `${formatTime(dHour)}`
+       min.innerHTML = `${formatTime(dMinute)}`
+       sec.innerHTML = `${formatTime(dSecond)}`
 
 }, 1000)
 
